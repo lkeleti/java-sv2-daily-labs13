@@ -2,7 +2,7 @@ package day01;
 
 import java.util.Objects;
 
-public class Student {
+public class Student implements Comparable<Student>{
     private String id;
     private String name;
 
@@ -30,5 +30,10 @@ public class Student {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return id.compareTo(o.id);
     }
 }
